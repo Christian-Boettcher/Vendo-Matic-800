@@ -1,14 +1,10 @@
-## Capstone - Vending Machine Software
+## Vending Machine Software
 
-You've been asked to develop an application for the newest vending machine distributor,
-Umbrella Corp. They've released a new vending machine, Vendo-Matic 800, that is integrated
-with everyone's bank accounts, allowing customers to purchase products from their computers for their convenience.
-
-### Application Requirements
+### Application Overview
 
 1. The vending machine dispenses beverages, candy, chips, and gum.
    - Each vending machine item has a Name and a Price.
-2. A main menu must display when the software runs, presenting the following options:
+2. A main menu displays when the software runs, presenting the following options:
     > ```
     > (1) Display Vending Machine Items
     > (2) Purchase
@@ -52,18 +48,18 @@ process menu:
           - All candy items print "Munch Munch, Yum!"
           - All drink items print "Glug Glug, Yum!"
           - All gum items print "Chew Chew, Yum!"
-        - After the product is dispensed, the machine must update its balance
+        - After the product is dispensed, the machine updates its balance
         accordingly and return the customer to the Purchase menu.
     3. Selecting "(3) Finish Transaction" allows the customer to complete the
     transaction and receive any remaining change.
         - The customer's money is returned using nickels, dimes, and quarters
         (using the smallest amount of coins possible).
-        - The machine's current balance must be updated to $0 remaining.
+        - The machine's current balance is updated to $0 remaining.
     4. After completing their purchase, the user is returned to the "Main" menu to
     continue using the vending machine.
-8. All purchases must be audited to prevent theft from the vending machine:
-   - Each purchase must generate a line in a file called `Log.txt`.
-   - The audit entry must be in the format:
+8. All purchases are audited to prevent theft from the vending machine:
+   - Each purchase generates a line in a file called `Log.txt`.
+   - The audit entry is in the format:
         >```
         > 01/01/2016 12:00:00 PM FEED MONEY: $5.00 $5.00
          >01/01/2016 12:00:15 PM FEED MONEY: $5.00 $10.00
@@ -71,14 +67,12 @@ process menu:
          >01/01/2016 12:01:25 PM Cowtales B2 $8.50 $7.50
          >01/01/2016 12:01:35 PM GIVE CHANGE: $7.50 $0.00
          >```
-9. Create as many of your classes as possible to be "testable" classes. Limit console
-input and output to as few classes as possible.
-10. Optional - Sales Report
-    - Provide a "Hidden" menu option on the main menu ("4") that writes to a sales
+9. Sales Report
+    - Provides a "Hidden" menu option on the main menu ("4") that writes to a sales
     report that shows the total sales since the machine was started. The name of the
-    file must include the date and time so each sales report is uniquely named.
+    file includes the date and time so each sales report is uniquely named.
     - An example of the output format is provided below.
-11. Provide unit tests demonstrating that your code works correctly.
+10. Unit tests provided to demonstrate that code works correctly.
 ___
 ### Vending Machine Data File
 The input file that stocks the vending machine products is a pipe `|` delimited file. Each line is a separate product in the file and follows the below format:
@@ -99,7 +93,7 @@ B2|Cowtales|1.50|Candy
 C1|Cola|1.25|Drink
 ```
 
-An input file has been provided with your repository: `vendingmachine.csv`.
+An input file has been provided: `vendingmachine.csv`.
 
  ---
 ### Sales Report
